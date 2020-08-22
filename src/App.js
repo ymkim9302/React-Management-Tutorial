@@ -33,6 +33,24 @@ class App extends Component {
   render() {
     return(
       <div>
+        {
+          customers.map(c => {
+            return (
+              <Customer
+                id={c.id}
+                image={c.image}
+                name={c.name}
+                birthday={c.birthday}
+                gender={c.gender}
+                job={c.job}
+                />
+            );
+          })
+        }
+        
+        {
+        /*  
+        반복문 사용 안했을 시.
         <Customer
           id={customers[0].id}
           image={customers[0].image}
@@ -50,13 +68,16 @@ class App extends Component {
           job={customers[1].job}
         />
         <Customer
-        id={customers[2].id}
-        image={customers[2].image}
-        name={customers[2].name}
-        birthday={customers[2].birthday}
-        gender={customers[2].gender}
-        job={customers[2].job}
-        />
+          id={customers[2].id}
+          image={customers[2].image}
+          name={customers[2].name}
+          birthday={customers[2].birthday}
+          gender={customers[2].gender}
+          job={customers[2].job}
+        /> 
+        */
+        }
+
       </div>
     );
   }
