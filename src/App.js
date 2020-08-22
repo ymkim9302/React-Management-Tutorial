@@ -76,6 +76,7 @@ class App extends Component {
           job={customers[2].job}
         /> 
         */
+       
         }
 
       </div>
